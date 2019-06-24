@@ -5,9 +5,10 @@
   <body>
     <script>
       function handleClick(){
-        targetWindow.postMessage("embed_button_clicked", "*", [{
-          documentTitle: documentTitle
-        }]);
+        window.postMessage({
+          action: "embed_button_clicked",
+          documentTitle: document.title
+        });
       }
     </script>
     <button onclick="handleClick()" style="width: 100px; height: 70px; border-radius: 3px">Embedded Button</button>
