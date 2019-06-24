@@ -8,7 +8,7 @@
         window.parent.postMessage({
           action: "embed_button_clicked",
           documentTitle: document.title
-        }, window.parent);
+        }, "*");
       }
     </script>
     <button onclick="handleClick()" style="width: 100px; height: 70px; border-radius: 3px">Embedded Button</button>
