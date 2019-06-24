@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Embedded Code</title>
+  </head>
+  <body>
+    <script>
+      function handleClick(){
+        targetWindow.postMessage("embed_button_clicked", "*", [{
+          documentTitle: documentTitle
+        }]);
+      }
+    </script>
+    <button onclick="handleClick()" style="width: 100px; height: 70px; border-radius: 3px">Embedded Button</button>
+  </body>
+</html>
